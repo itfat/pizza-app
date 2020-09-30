@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # third_party
-    # 'djangorestframework'
+    'rest_framework',
     # own
     'pizza'
     

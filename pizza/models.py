@@ -29,9 +29,12 @@ class Pizza(models.Model):
         (Margherita, 'Margherita'),
         (Veggie, 'Veggie')
     ]
-    name = models.CharField(max_length=50)
+    # name = models.CharField(max_length=50)
     category = models.CharField(max_length=10, choices= category_choices, default= None)
     size = models.CharField(max_length=10, choices= size_choices, default= None)
     price = models.DecimalField(max_digits=5, decimal_places=2)
     image = models.ImageField(upload_to='images/', null=True)
+
+    def __str__(self):
+        return self.name
     
