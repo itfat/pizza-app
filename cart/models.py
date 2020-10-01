@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Pizza(models.Model):
+class Cart(models.Model):
     Large = 'L'
     Medium = 'M'
     Small = 'S'
@@ -32,9 +32,3 @@ class Pizza(models.Model):
     # name = models.CharField(max_length=50)
     category = models.CharField(max_length=10, choices= category_choices, default= None)
     size = models.CharField(max_length=10, choices= size_choices, default= None)
-    price = models.DecimalField(max_digits=5, decimal_places=0)
-    image = models.ImageField(upload_to='images/', null=True)
-
-    def __str__(self):
-        return (self.category+','+self.size)
-    

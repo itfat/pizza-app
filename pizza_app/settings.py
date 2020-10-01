@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     # third_party
     'rest_framework',
     # own
-    'pizza'
+    'pizza',
+    'cart'
     
 ]
 
